@@ -2,7 +2,7 @@ module tb_alu;
   parameter N = 2;
   /*
   N = 2 para que o número de casos
-  não fique muito absurdo
+  não fique muito grande
   */
 
   logic signed [N-1:0] a, b;
@@ -35,20 +35,20 @@ module tb_alu;
         end
         3'b001: begin
           name = "Subtração";
-		  symbol = "-";
+		      symbol = "-";
         end
         3'b010: begin
-		  name = "Multiplicação";
-		  symbol = "*";
-		end
+		      name = "Multiplicação";
+		      symbol = "*";
+		    end
         3'b011: begin
-		  name = "Bitwise AND";
-		  symbol = "&";
-		end
+		      name = "Bitwise AND";
+          symbol = "&";
+		    end
         default: begin
-		  name = "Bitwise OR";
-		  symbol = "|";
-		end
+		      name = "Bitwise OR";
+		      symbol = "|";
+		    end
       endcase
 
       $display("%s:", name);
